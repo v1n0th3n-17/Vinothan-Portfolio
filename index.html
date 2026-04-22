@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Creative Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Dev<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-links">
+            <li><a href="#hero" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#skills" class="mobile-link">Skills</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge reveal-left">
+                    <span class="badge-dot"></span>
+                    Available for work
+                </div>
+                <h1 class="hero-title reveal-left">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-line gradient-text">Vinothan</span>
+                </h1>
+                <p class="hero-subtitle reveal-left">
+                    Full-Stack Developer & UI/UX Designer crafting
+                    <span class="typed-text" id="typedText"></span>
+                    <span class="typed-cursor">|</span>
+                </p>
+                <div class="hero-buttons reveal-left">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#about" class="btn btn-outline">
+                        <span>About Me</span>
+                    </a>
+                </div>
+                <div class="hero-stats reveal-left">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects Done</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="30">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-wrapper reveal-right">
+                <div class="hero-image-3d">
+                    <div class="image-border"></div>
+                    <img src="./vino.jpeg  N           " alt="Vinothan" class="hero-image">
+                    <div class="image-glow"></div>
+                </div>
+                <div class="floating-badge badge-code">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    <span>Code</span>
+                </div>
+                <div class="floating-badge badge-design">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                        <path d="M2 2l7.586 7.586"></path>
+                        <circle cx="11" cy="11" r="2"></circle>
+                    </svg>
+                    <span>Design</span>
+                </div>
+                <div class="floating-badge badge-rocket">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                        <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                    </svg>
+                    <span>Ship</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">Get to know me</span>
+                <h2 class="section-title reveal-up">About <span class="gradient-text">Me</span></h2>
+                <div class="title-underline reveal-up"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-section reveal-left">
+                    <div class="about-image-card">
+                        <img src="./vinothan.jpeg" alt="About me" class="about-image">
+                        <div class="about-image-overlay"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">5+</span>
+                        <span class="exp-text">Years of<br>Experience</span>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <h3 class="about-heading">A passionate developer based in San Francisco</h3>
+                    <p class="about-text">
+                        I'm a creative full-stack developer with a passion for building beautiful, 
+                        functional, and user-centered digital experiences. With 5+ years of experience 
+                        in the field, I am always looking for new and innovative ways to bring my clients' 
+                        visions to life.
+                    </p>
+                    <p class="about-text">
+                        I believe that design is about more than just making things look pretty — it's 
+                        about solving problems and creating intuitive, enjoyable experiences for users. 
+                        Whether I'm working on a website, mobile app, or other digital product, I bring 
+                        my commitment to design excellence and user-centered thinking to every project.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Name:</span>
+                            <span class="info-value">Vinothan</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">alex@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location:</span>
+                            <span class="info-value">San Francisco, CA</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Availability:</span>
+                            <span class="info-value status-available">Open to Work</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-download">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">What I do best</span>
+                <h2 class="section-title reveal-up">My <span class="gradient-text">Skills</span></h2>
+                <div class="title-underline reveal-up"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-category reveal-up" data-delay="0">
+                    <div class="category-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar" data-width="95">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML / CSS / Sass</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-width="90">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript / TypeScript</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-width="88">
+                            <div class="skill-header">
+                                <span class="skill-name">React / Next.js</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-width="82">
+                            <div class="skill-header">
+                                <span class="skill-name">Vue.js / Nuxt</span>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category reveal-up" data-delay="100">
+                    <div class="category-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="category-title">Backend</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar" data-width="92">
+                            <div class="skill-header">
+                                <span class="skill-name">Node.js / Express</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-width="85">
+                            <div class="skill-header">
+                                <span class="skill-name">Python / Django</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-width="80">
+                            <div class="skill-header">
+                                <span class="skill-name">PostgreSQL / MongoDB</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-width="78">
+                            <div class="skill-header">
+                                <span class="skill-name">GraphQL / REST APIs</span>
+                                <span class="skill-percent">78%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Design -->
+                <div class="skill-category reveal-up" data-delay="200">
+                    <div class="category-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                            <path d="M2 2l7.586 7.586"></path>
+                            <circle cx="11" cy="11" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="category-title">Design & Tools</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar" data-width="90">
+                            <div class="skill-header">
+                                <span class="skill-name">Figma / Adobe XD</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-width="85">
+                            <div class="skill-header">
+                                <span class="skill-name">Git / GitHub</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-width="80">
+                            <div class="skill-header">
+                                <span class="skill-name">Docker / CI/CD</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-width="75">
+                            <div class="skill-header">
+                                <span class="skill-name">AWS / Vercel</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Marquee -->
+            <div class="tech-marquee reveal-up">
+                <div class="marquee-track">
+                    <div class="marquee-content">
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">TypeScript</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">Next.js</span>
+                        <span class="tech-item">MongoDB</span>
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item">Docker</span>
+                        <span class="tech-item">Figma</span>
+                        <span class="tech-item">AWS</span>
+                        <span class="tech-item">GraphQL</span>
+                        <span class="tech-item">Tailwind</span>
+                    </div>
+                    <div class="marquee-content">
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">TypeScript</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">Next.js</span>
+                        <span class="tech-item">MongoDB</span>
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item">Docker</span>
+                        <span class="tech-item">Figma</span>
+                        <span class="tech-item">AWS</span>
+                        <span class="tech-item">GraphQL</span>
+                        <span class="tech-item">Tailwind</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">My recent work</span>
+                <h2 class="section-title reveal-up">Featured <span class="gradient-text">Projects</span></h2>
+                <div class="title-underline reveal-up"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="project-filters reveal-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web App</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">UI/UX</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <div class="project-card reveal-up" data-category="web" data-delay="0">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <div class="project-mockup">
+                                <div class="mockup-bar">
+                                    <span class="mockup-dot red"></span>
+                                    <span class="mockup-dot yellow"></span>
+                                    <span class="mockup-dot green"></span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="mockup-header">E-Commerce Dashboard</div>
+                                    <div class="mockup-grid">
+                                        <div class="mockup-card"></div>
+                                        <div class="mockup-card"></div>
+                                        <div class="mockup-card"></div>
+                                        <div class="mockup-card wide"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="overlay-links">
+                                <a href="#" class="overlay-link" title="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" class="overlay-link" title="Source Code">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce Dashboard</h3>
+                        <p class="project-desc">A full-featured admin dashboard with real-time analytics, inventory management, and order tracking capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-up" data-category="mobile" data-delay="100">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <div class="project-mockup phone-mockup">
+                                <div class="phone-notch"></div>
+                                <div class="mockup-content phone-content">
+                                    <div class="mockup-header small">Fitness App</div>
+                                    <div class="phone-stats">
+                                        <div class="phone-stat-bar"></div>
+                                        <div class="phone-stat-bar"></div>
+                                        <div class="phone-stat-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="overlay-links">
+                                <a href="#" class="overlay-link" title="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" class="overlay-link" title="Source Code">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <h3 class="project-title">Fitness Tracker App</h3>
+                        <p class="project-desc">A cross-platform mobile application for tracking workouts, nutrition, and health metrics with AI-powered insights.</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-up" data-category="design" data-delay="200">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <div class="project-mockup design-mockup">
+                                <div class="design-canvas">
+                                    <div class="design-shape circle"></div>
+                                    <div class="design-shape square"></div>
+                                    <div class="design-shape triangle"></div>
+                                    <div class="design-text">UI Kit</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="overlay-links">
+                                <a href="#" class="overlay-link" title="View Design">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" class="overlay-link" title="Case Study">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Design System</span>
+                        </div>
+                        <h3 class="project-title">SaaS Design System</h3>
+                        <p class="project-desc">A comprehensive design system with 200+ components, tokens, and patterns for a SaaS platform redesign.</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-up" data-category="web" data-delay="0">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                            <div class="project-mockup">
+                                <div class="mockup-bar">
+                                    <span class="mockup-dot red"></span>
+                                    <span class="mockup-dot yellow"></span>
+                                    <span class="mockup-dot green"></span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="mockup-header">Social Platform</div>
+                                    <div class="mockup-grid">
+                                        <div class="mockup-card"></div>
+                                        <div class="mockup-card wide"></div>
+                                        <div class="mockup-card"></div>
+                                        <div class="mockup-card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="overlay-links">
+                                <a href="#" class="overlay-link" title="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" class="overlay-link" title="Source Code">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Prisma</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <h3 class="project-title">Social Media Platform</h3>
+                        <p class="project-desc">A real-time social platform with messaging, media sharing, and community features built with modern tech stack.</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-up" data-category="mobile" data-delay="100">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                            <div class="project-mockup phone-mockup">
+                                <div class="phone-notch"></div>
+                                <div class="mockup-content phone-content">
+                                    <div class="mockup-header small">Finance App</div>
+                                    <div class="phone-chart">
+                                        <div class="chart-line"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="overlay-links">
+                                <a href="#" class="overlay-link" title="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" class="overlay-link" title="Source Code">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">Stripe</span>
+                        </div>
+                        <h3 class="project-title">Finance Manager</h3>
+                        <p class="project-desc">A personal finance app with budget tracking, investment portfolio, and smart spending analytics.</p>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-up" data-category="design" data-delay="200">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%);">
+                            <div class="project-mockup design-mockup">
+                                <div class="design-canvas">
+                                    <div class="design-shape rounded"></div>
+                                    <div class="design-lines">
+                                        <div class="d-line"></div>
+                                        <div class="d-line"></div>
+                                        <div class="d-line"></div>
+                                    </div>
+                                    <div class="design-text">Brand</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="overlay-links">
+                                <a href="#" class="overlay-link" title="View Design">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" class="overlay-link" title="Case Study">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">Illustrator</span>
+                        </div>
+                        <h3 class="project-title">Brand Identity — TechFlow</h3>
+                        <p class="project-desc">Complete brand identity design including logo, color palette, typography, and brand guidelines for a tech startup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>Dev<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p class="footer-tagline">Crafting digital experiences with passion & precision.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Dribbble">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.81zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.91 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vinothan. All rights reserved.</p>
+                <p>Built with <span class="heart">♥</span> and lots of ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
